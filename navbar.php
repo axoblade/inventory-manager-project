@@ -12,13 +12,8 @@
                     <ul>
                         <li><a href="productlist.php">Product List</a></li>
                         <li><a href="addproduct.html">Add Product</a></li>
-                        <li><a href="categorylist.html">Category List</a></li>
-                        <li><a href="addcategory.html">Add Category</a></li>
-                        <li><a href="subcategorylist.html">Sub Category List</a></li>
-                        <li><a href="subaddcategory.html">Add Sub Category</a></li>
-                        <li><a href="brandlist.html">Brand List</a></li>
-                        <li><a href="addbrand.html">Add Brand</a></li>
-                        <li><a href="importproduct.html">Import Products</a></li>
+                        
+                    
                     </ul>
                 </li>
                 <li class="submenu">
