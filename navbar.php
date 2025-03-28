@@ -11,9 +11,7 @@
                             Product</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="productlist.php">Product List</a></li>
-                        <li><a href="addproduct.html">Add Product</a></li>
-                        
-                    
+                        <li><a href="addproduct.php">Add Product</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
