@@ -1,3 +1,31 @@
+<?php
+require("./authCheck.php");
+require("./db.php");
+$error = "";
+$success = false;
+$db = new MySQLDatabase();
+
+if (isset($_POST['addProduct'])) {
+    $insertData = [
+        'name' => $_POST['productName'],
+        'description' => $_POST['description'],
+        'avQty' => $_POST['avQty'],
+        'cost' => $_POST['cost'],
+        'isRawMaterial' => $_POST['rawMaterial'],
+        'price' => $_POST['price'],
+        'minQty' => $_POST['minQty'],
+        'sku' => $_POST['sku']
+    ];
+    $insertId = $db->insert('products', $insertData);
+    if ($insertId) {
+        $success = true;
+    } else {
+        $error = "Failed to create product";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -252,127 +280,86 @@
                         <h6>Create new product</h6>
                     </div>
                 </div>
+                <?php
+                if (!empty($error)) {
+                ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error!</strong> <?= $error; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php
+                }
 
+                if (!empty($success)) {
+                ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong> Product added successfully
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php
+                }
+                ?>
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Product Name</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Category</label>
-                                    <select class="select">
-                                        <option>Choose Category</option>
-                                        <option>Computers</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Sub Category</label>
-                                    <select class="select">
-                                        <option>Choose Sub Category</option>
-                                        <option>Fruits</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Brand</label>
-                                    <select class="select">
-                                        <option>Choose Brand</option>
-                                        <option>Brand</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Unit</label>
-                                    <select class="select">
-                                        <option>Choose Unit</option>
-                                        <option>Unit</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>SKU</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Minimum Qty</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Quantity</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Tax</label>
-                                    <select class="select">
-                                        <option>Choose Tax</option>
-                                        <option>2%</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Discount Type</label>
-                                    <select class="select">
-                                        <option>Percentage</option>
-                                        <option>10%</option>
-                                        <option>20%</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label>Price</label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label> Status</label>
-                                    <select class="select">
-                                        <option>Closed</option>
-                                        <option>Open</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label> Product Image</label>
-                                    <div class="image-upload">
-                                        <input type="file">
-                                        <div class="image-uploads">
-                                            <img src="assets/img/icons/upload.svg" alt="img">
-                                            <h4>Drag and drop a file to upload</h4>
-                                        </div>
+                        <form method="POST">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Product Name</label>
+                                        <input type="text" name="productName" required>
                                     </div>
                                 </div>
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Is Raw material</label>
+                                        <select class="select" required name="rawMaterial">
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>SKU</label>
+                                        <input type="text" name="sku" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Minimum Qty</label>
+                                        <input type="number" class="form-control" name="minQty" value="1">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Av. Quantity</label>
+                                        <input type="number" class="form-control" name="avQty" value="0">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Selling Price</label>
+                                        <input type="number" class="form-control" name="price" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Cost Price</label>
+                                        <input type="number" class="form-control" name="cost" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea class="form-control" name="description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button class="btn btn-submit me-2" type="submit" name="addProduct">Submit</button>
+                                    <a href="productlist.html" class="btn btn-cancel">Cancel</a>
+                                </div>
                             </div>
-                            <div class="col-lg-12">
-                                <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-                                <a href="productlist.html" class="btn btn-cancel">Cancel</a>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
