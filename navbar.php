@@ -25,7 +25,7 @@
                         <li><a href="createsalesreturns.html">New Sales Return</a></li>
                     </ul>
                 </li>
-            
+
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span>
                             Transfer</span> <span class="menu-arrow"></span></a>
@@ -52,7 +52,7 @@
                         <li><a href="customerlist.html">Customer List</a></li>
                         <li><a href="addcustomer.html">Add Customer </a></li>
                         <li><a href="supplierlist.html">Supplier List</a></li>
-                        <li><a href="addsupplier.html">Add Supplier </a></li>
+                        <li><a href="addsupplier.php">Add Supplier </a></li>
                         <li><a href="userlist.html">Employee List</a></li>
                         <li><a href="adduser.html">Add Employee</a></li>
                     </ul>
