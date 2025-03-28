@@ -25,15 +25,7 @@
                         <li><a href="createsalesreturns.html">New Sales Return</a></li>
                     </ul>
                 </li>
-                <li class="submenu">
-                    <a href="javascript:void(0);"><img src="assets/img/icons/purchase1.svg" alt="img"><span> Raw
-                            Materials</span> <span class="menu-arrow"></span></a>
-                    <ul>
-                        <li><a href="purchaselist.html">Raw material List</a></li>
-                        <li><a href="addpurchase.html">Add Raw material</a></li>
-                        <li><a href="importpurchase.html">Import Raw Material</a></li>
-                    </ul>
-                </li>
+            
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span>
                             Transfer</span> <span class="menu-arrow"></span></a>
