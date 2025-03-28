@@ -51,7 +51,7 @@
                     <ul>
                         <li><a href="customerlist.html">Customer List</a></li>
                         <li><a href="addcustomer.html">Add Customer </a></li>
-                        <li><a href="supplierlist.html">Supplier List</a></li>
+                        <li><a href="supplierlist.php">Supplier List</a></li>
                         <li><a href="addsupplier.php">Add Supplier </a></li>
                         <li><a href="userlist.html">Employee List</a></li>
                         <li><a href="adduser.html">Add Employee</a></li>
