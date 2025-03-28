@@ -49,8 +49,8 @@
                     <a href="javascript:void(0);"><img src="assets/img/icons/users1.svg" alt="img"><span>
                             People</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="customerlist.html">Customer List</a></li>
-                        <li><a href="addcustomer.html">Add Customer </a></li>
+                        <li><a href="customerlist.php">Customer List</a></li>
+                        <li><a href="addcustomer.php">Add Customer </a></li>
                         <li><a href="supplierlist.php">Supplier List</a></li>
                         <li><a href="addsupplier.php">Add Supplier </a></li>
                         <li><a href="userlist.html">Employee List</a></li>
@@ -59,27 +59,6 @@
                 </li>
                 <li class="submenu">
 
-                <li class="submenu">
-                    <a href="javascript:void(0);"><i data-feather="columns"></i> <span> Forms </span> <span
-                            class="menu-arrow"></span></a>
-                    <ul>
-                        <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
-                        <li><a href="form-input-groups.html">Input Groups </a></li>
-                        <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                        <li><a href="form-vertical.html"> Vertical Form </a></li>
-                        <li><a href="form-mask.html">Form Mask </a></li>
-                        <li><a href="form-validation.html">Form Validation </a></li>
-                        <li><a href="form-select2.html">Form Select2 </a></li>
-                        <li><a href="form-fileupload.html">File Upload </a></li>
-                    </ul>
-                </li>
-                <li class="submenu">
-                    <ul>
-                        <li><a href="chat.html">Chat</a></li>
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li><a href="email.html">Email</a></li>
-                    </ul>
-                </li>
                 <li class="submenu">
                     <a href="javascript:void(0);"><i data-feather="columns"></i> <span> Reports </span> <span
                             class="menu-arrow"></span></a>
