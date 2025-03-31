@@ -31,7 +31,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style1.css">
 </head>
 
 <body class="account-page">
@@ -42,7 +42,7 @@ if (isset($_POST['login'])) {
                 <div class="login-content">
                     <div class="login-userset">
                         <div class="login-userheading">
-                            <h3>Sign In</h3>
+                            <h3>Welcome to E's Store</h3>
                             <h4>Please login to your account</h4>
 
                             <?php
@@ -75,7 +75,7 @@ if (isset($_POST['login'])) {
                             </div>
                             <div class="form-login">
                                 <div class="alreadyuser">
-                                    <h4><a href="forgetpassword.html" class="hover-a">Forgot Password?</a></h4>
+                                    <h3><a href="forgetpassword.html" class="hover-a">Forgot Password?</a></h3>
                                 </div>
                             </div>
                             <div class="form-login">
@@ -85,7 +85,7 @@ if (isset($_POST['login'])) {
                     </div>
                 </div>
                 <div class="login-img">
-                    <img src="assets/img/login.jpg" alt="img">
+                    <!--<img src="assets/img/login.jpg" alt="img">-->
                 </div>
             </div>
         </div>
