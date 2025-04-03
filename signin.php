@@ -6,7 +6,7 @@ if (isset($_POST['login'])) {
     $userName = $_POST["username"];
     $password = $_POST["password"];
 
-    if ($userName == "admin" && $password == "password") {
+    if ($userName == "mpirirwetabitha0@gmail.com" && $password == "MTabby1996") {
 
         $_SESSION["isLoggedIn"] = true;
         header("Location: index.php");
@@ -75,7 +75,7 @@ if (isset($_POST['login'])) {
                             </div>
                             <div class="form-login">
                                 <div class="alreadyuser">
-                                    <h3><a href="forgetpassword.html" class="hover-a">Forgot Password?</a></h3>
+                                    <h3><a href="forgetpassword.php" class="hover-a">Forgot Password?</a></h3>
                                 </div>
                             </div>
                             <div class="form-login">

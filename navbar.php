@@ -28,11 +28,11 @@
 
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span>
-                            Transfer</span> <span class="menu-arrow"></span></a>
+                            Rawmaterials</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="transferlist.html">Transfer List</a></li>
-                        <li><a href="addtransfer.html">Add Transfer </a></li>
-                        <li><a href="importtransfer.html">Import Transfer </a></li>
+                        <li><a href="transferlist.html">Rawmaterials list</a></li>
+                        <li><a href="addtransfer.html">Add Rawmaterials </a></li>
+                       
                     </ul>
                 </li>
                 <li class="submenu">
@@ -53,8 +53,8 @@
                         <li><a href="addcustomer.php">Add Customer </a></li>
                         <li><a href="supplierlist.php">Supplier List</a></li>
                         <li><a href="addsupplier.php">Add Supplier </a></li>
-                        <li><a href="userlist.html">Employee List</a></li>
-                        <li><a href="adduser.html">Add Employee</a></li>
+                        <li><a href="employeelist.php">Employee List</a></li>
+                        <li><a href="addemployee.php">Add Employee</a></li>
                     </ul>
                 </li>
                 <li class="submenu">

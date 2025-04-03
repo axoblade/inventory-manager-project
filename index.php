@@ -19,7 +19,7 @@ require("./authCheck.php");
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -30,25 +30,6 @@ require("./authCheck.php");
     <div class="main-wrapper">
 
         <div class="header">
-
-            <div class="header-left active">
-                <a href="index.html" class="logo">
-                    <img src="assets/11.jpg" alt="">
-                </a>
-                <a href="index.html" class="logo-small">
-                    <img src="assets/11.jpg" alt="">
-                </a>
-                <a id="toggle_btn" href="javascript:void(0);">
-                </a>
-            </div>
-
-            <a id="mobile_btn" class="mobile_btn" href="#sidebar">
-                <span class="bar-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </a>
 
             <ul class="nav user-menu">
 
@@ -69,40 +50,6 @@ require("./authCheck.php");
                     </div>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                        <img src="assets/img/icons/notification-bing.svg" alt="img"> <span
-                            class="badge rounded-pill">4</span>
-                    </a>
-                    <div class="dropdown-menu notifications">
-                        <div class="topnav-dropdown-header">
-                            <span class="notification-title">Notifications</span>
-                            <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
-                        </div>
-                        <div class="noti-content">
-                            <ul class="notification-list">
-                                <li class="notification-message">
-                                    <a href="activities.html">
-                                        <div class="media d-flex">
-                                            <span class="avatar flex-shrink-0">
-                                                <img alt="" src="assets/img/profiles/avatar-02.jpg">
-                                            </span>
-                                            <div class="media-body flex-grow-1">
-                                            </div>
-                                <li class="notification-message">
-                                    <a href="activities.html">
-                                        <div class="media d-flex">
-                                            <span class="avatar flex-shrink-0">
-                                                <img alt="" src="assets/img/profiles/avatar-13.jpg">
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <div class="topnav-dropdown-footer">
-                                        <a href="activities.html">View all Notifications</a>
-                                    </div>
-                        </div>
-                </li>
-
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
                         <span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
@@ -114,7 +61,7 @@ require("./authCheck.php");
                                 <span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
                                     <span class="status online"></span></span>
                                 <div class="profilesets">
-                                    <h6>John Doe</h6>
+                                    <h6>Tabitha Mpirirwe</h6>
                                     <h5>Admin</h5>
                                 </div>
                             </div>
@@ -124,7 +71,7 @@ require("./authCheck.php");
                             <a class="dropdown-item" href="generalsettings.html"><i class="me-2"
                                     data-feather="settings"></i>Settings</a>
                             <hr class="m-0">
-                            <a class="dropdown-item logout pb-0" href="signin.html"><img
+                            <a class="dropdown-item logout pb-0" href="signin.php"><img
                                     src="assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
                         </div>
                     </div>
@@ -147,7 +94,7 @@ require("./authCheck.php");
                                 <span><img src="assets/img/icons/dash1.svg" alt="img"></span>
                             </div>
                             <div class="dash-widgetcontent">
-                                <h5>$<span class="counters" data-count="307144.00">$307,144.00</span></h5>
+                                <h5><span class="counters" data-count=""></span></h5>
                                 <h6>Total Purchase Due</h6>
                             </div>
                         </div>
@@ -158,7 +105,7 @@ require("./authCheck.php");
                                 <span><img src="assets/img/icons/dash2.svg" alt="img"></span>
                             </div>
                             <div class="dash-widgetcontent">
-                                <h5>$<span class="counters" data-count="4385.00">$4,385.00</span></h5>
+                                <h5><span class="counters" data-count=""></span></h5>
                                 <h6>Total Sales Due</h6>
                             </div>
                         </div>
@@ -169,7 +116,7 @@ require("./authCheck.php");
                                 <span><img src="assets/img/icons/dash3.svg" alt="img"></span>
                             </div>
                             <div class="dash-widgetcontent">
-                                <h5>$<span class="counters" data-count="385656.50">385,656.50</span></h5>
+                                <h5>$<span class="counters" data-count=""></span></h5>
                                 <h6>Total Sale Amount</h6>
                             </div>
                         </div>
@@ -180,7 +127,7 @@ require("./authCheck.php");
                                 <span><img src="assets/img/icons/dash4.svg" alt="img"></span>
                             </div>
                             <div class="dash-widgetcontent">
-                                <h5>$<span class="counters" data-count="40000.00">400.00</span></h5>
+                                <h5>$<span class="counters" data-count=""></span></h5>
                                 <h6>Total Sale Amount</h6>
                             </div>
                         </div>
