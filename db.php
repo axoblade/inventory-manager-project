@@ -14,9 +14,10 @@ class MySQLDatabase
     {
         $host = "localhost";
         $username = "root";
-        $password = "";
+        $password = "root";
         $database = "inventory";
-        $this->connection = new mysqli($host, $username, $password, $database);
+        $port = 8889;
+        $this->connection = new mysqli($host, $username, $password, $database, $port);
 
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
