@@ -30,8 +30,7 @@ require("./authCheck.php");
     <div class="main-wrapper">
 
         <div class="header">
-
-            <ul class="nav user-menu">
+             <ul class="nav user-menu">
 
                 <li class="nav-item">
                     <div class="top-nav-search">
