@@ -7,17 +7,17 @@
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Inventory Management System</title>
+<title>Dreams Pos admin template</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.jpg">
 
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-
 <link rel="stylesheet" href="assets/css/animate.css">
 
 <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
 
 <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
@@ -275,8 +275,8 @@
 <li class="submenu">
 <a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span> Transfer</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="transferlist.html">Transfer List</a></li>
-<li><a href="addtransfer.html" class="active">Add Transfer </a></li>
+<li><a href="transferlist.html" class="active">Transfer List</a></li>
+<li><a href="addtransfer.html">Add Transfer </a></li>
 <li><a href="importtransfer.html">Import Transfer </a></li>
 </ul>
 </li>
@@ -439,169 +439,379 @@
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>ADD Transfer</h4>
+<h4>Transfer List</h4>
 <h6>Transfer your stocks to one store another store.</h6>
 </div>
+<div class="page-btn">
+<a href="addtransfer.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img" class="me-2">Add Transfer</a>
 </div>
+</div>
+
 <div class="card">
 <div class="card-body">
-<div class="row">
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>Date </label>
-<div class="input-groupicon">
-<input type="text" placeholder="DD-MM-YYYY" class="datetimepicker">
-<div class="addonset">
-<img src="assets/img/icons/calendars.svg" alt="img">
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>From</label>
-<select class="select">
-<option>Choose</option>
-<option>Store 1</option>
-<option>Store 2</option>
-</select>
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>To</label>
-<select class="select">
-<option>Choose</option>
-<option>Store 1</option>
-<option>Store 2</option>
-</select>
-</div>
-</div>
-<div class="col-lg-12 col-sm-6 col-12">
-<div class="form-group">
-<label>Product Name</label>
-<div class="input-groupicon">
-<input type="text" placeholder="Scan/Search Product by code and select...">
-<div class="addonset">
-<img src="assets/img/icons/scanners.svg" alt="img">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="table-responsive ">
-<table class="table">
-<thead>
-<tr>
-<th>Product Name</th>
-<th>QTY</th>
-<th>Price</th>
-<th>Stock	</th>
-<th>Discount</th>
-<th>Tax </th>
-<th>Total Cost ($)</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="bor-b1">
-<td class="productimgname">
-<a class="product-img">
-<img src="assets/img/product/product7.jpg" alt="product">
-</a>
-<a href="javascript:void(0);">Apple Earpods</a>
-</td>
-<td>
-<div class="input-group form-group mb-0">
-<a class="scanner-set input-group-text">
-<img src="assets/img/icons/plus1.svg" alt="img">
-</a>
-<input type="text" value="1" class="calc-no">
-<a class="scanner-set input-group-text">
-<img src="assets/img/icons/minus.svg" alt="img">
+<div class="table-top">
+<div class="search-set">
+<div class="search-path">
+<a class="btn btn-filter" id="filter_search">
+<img src="assets/img/icons/filter.svg" alt="img">
+<span><img src="assets/img/icons/closes.svg" alt="img"></span>
 </a>
 </div>
-</td>
-<td>1500.00</td>
-<td>50.00</td>
-<td>0.00</td>
-<td>0.00</td>
-<td>1500.00</td>
-<td>
-<a href="javascript:void(0);" class="delete-set"><img src="assets/img/icons/delete.svg" alt="svg"></a>
-</td>
-</tr>
- </tbody>
-</table>
+<div class="search-input">
+<a class="btn btn-searchset">
+<img src="assets/img/icons/search-white.svg" alt="img">
+</a>
 </div>
 </div>
-<div class="row">
-<div class="col-lg-12 float-md-right">
-<div class="total-order">
+<div class="wordset">
 <ul>
 <li>
-<h4>Order Tax</h4>
-<h5>$ 0.00 (0.00%)</h5>
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img src="assets/img/icons/pdf.svg" alt="img"></a>
 </li>
 <li>
-<h4>Discount	</h4>
-<h5>$ 0.00</h5>
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><img src="assets/img/icons/excel.svg" alt="img"></a>
 </li>
 <li>
-<h4>Shipping</h4>
-<h5>$ 0.00</h5>
-</li>
-<li class="total">
-<h4>Grand Total</h4>
-<h5>$ 0.00</h5>
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="print"><img src="assets/img/icons/printer.svg" alt="img"></a>
 </li>
 </ul>
 </div>
 </div>
-</div>
+
+<div class="card" id="filter_inputs">
+<div class="card-body pb-0">
 <div class="row">
-<div class="col-lg-3 col-sm-6 col-12">
+<div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<label>Order Tax</label>
-<input type="text">
+<input type="text" class="datetimepicker cal-icon" placeholder="Choose Date">
 </div>
 </div>
-<div class="col-lg-3 col-sm-6 col-12">
+<div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<label>Discount</label>
-<input type="text">
+<input type="text" placeholder="Enter Reference">
 </div>
 </div>
-<div class="col-lg-3 col-sm-6 col-12">
+<div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<label>Shipping</label>
-<input type="text">
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>Status</label>
 <select class="select">
 <option>Choose Status</option>
-<option>Completed</option>
 <option>Inprogress</option>
+<option>Complete</option>
 </select>
 </div>
 </div>
-<div class="col-lg-12">
+<div class="col-lg-1 col-sm-6 col-12 ms-auto">
 <div class="form-group">
-<label>Description</label>
-<textarea class="form-control"></textarea>
-</div>
-</div>
-<div class="col-lg-12">
-<a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-<a href="transferlist.html" class="btn btn-cancel">Cancel</a>
+<a class="btn btn-filters ms-auto"><img src="assets/img/icons/search-whites.svg" alt="img"></a>
 </div>
 </div>
 </div>
 </div>
+</div>
+
+<div class="table-responsive">
+<table class="table  datanew">
+<thead>
+<tr>
+<th>
+<label class="checkboxs">
+<input type="checkbox" id="select-all">
+<span class="checkmarks"></span>
+</label>
+</th>
+<th>Date</th>
+<th>Reference</th>
+<th>From</th>
+<th>Paid</th>
+<th>items</th>
+<th>Grand total</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0101</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>1500.00</td>
+<td><span class="badges bg-lightgreen">Completed</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0102</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>45000.00</td>
+<td><span class="badges bg-lightgreen">Completed</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0103</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>2400.00</td>
+<td><span class="badges bg-lightgreen">Completed</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0104</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>2400.00</td>
+<td><span class="badges bg-lightgreen">Completed</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0105</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>2400.00</td>
+<td><span class="badges bg-lightgreen">Completed</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0106</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>8456.00</td>
+<td><span class="badges bg-lightgreen">Completed</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0107</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>150.00</td>
+<td><span class="badges bg-lightgreen">Completed</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0108</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>365.00</td>
+<td><span class="badges bg-lightred">Pending</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0109</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>365.00</td>
+<td><span class="badges bg-lightred">Pending</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR01010</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>365.00</td>
+<td><span class="badges bg-lightred">Pending</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0111</td>
+<td>Store1</td>
+ <td>Store2</td>
+<td>10.00</td>
+<td>365.00</td>
+<td><span class="badges bg-lightred">Pending</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>19 Nov 2022</td>
+<td>TR0112</td>
+<td>Store1</td>
+<td>Store2</td>
+<td>10.00</td>
+<td>365.00</td>
+<td><span class="badges bg-lightred">Pending</span></td>
+<td>
+<a class="me-3" href="edittransfer.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 </div>
@@ -618,10 +828,10 @@
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/plugins/select2/js/select2.min.js"></script>
-
 <script src="assets/js/moment.min.js"></script>
 <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="assets/plugins/select2/js/select2.min.js"></script>
 
 <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
 <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>

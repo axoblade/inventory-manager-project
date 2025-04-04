@@ -166,7 +166,8 @@ $suppliers = $db->fetchData('service_providers');
                                         <th>Phone</th>
                                         <th>email</th>
                                         <th>Country</th>
-                                        <!--<th>Action</th>-->
+                                        
+                            
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -187,14 +188,7 @@ $suppliers = $db->fetchData('service_providers');
                                             <?= $data['email'] ?>
                                         </td>
                                         <td><?= $data['country'] ?></td>
-                                        <!--<td>
-                                            <a class="me-3" href="editsupplier.html">
-                                                <img src="assets/img/icons/edit.svg" alt="img" />
-                                            </a>
-                                            <a class="me-3 confirm-text" href="javascript:void(0);">
-                                                <img src="assets/img/icons/delete.svg" alt="img" />
-                                            </a>
-                                        </td>-->
+                    
                                     </tr>
                                     <?php
 									}
@@ -207,7 +201,7 @@ $suppliers = $db->fetchData('service_providers');
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+   <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
 
     <script src="assets/js/feather.min.js"></script>

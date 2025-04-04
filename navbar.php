@@ -13,7 +13,7 @@
                             Product</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="productlist.php">Product List</a></li>
-                        <li><a href="addproduct.php">Add Product</a></li>
+                
                     </ul>
                 </li>
                 <li class="submenu">
@@ -28,10 +28,9 @@
 
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span>
-                            Rawmaterials</span> <span class="menu-arrow"></span></a>
+                            Purchases</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="transferlist.html">Rawmaterials list</a></li>
-                        <li><a href="addtransfer.html">Add Rawmaterials </a></li>
+                        <li><a href="Purchaselist.php">Purchases list</a></li>
                        
                     </ul>
                 </li>
@@ -50,11 +49,9 @@
                             People</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="customerlist.php">Customer List</a></li>
-                        <li><a href="addcustomer.php">Add Customer </a></li>
                         <li><a href="supplierlist.php">Supplier List</a></li>
-                        <li><a href="addsupplier.php">Add Supplier </a></li>
                         <li><a href="employeelist.php">Employee List</a></li>
-                        <li><a href="addemployee.php">Add Employee</a></li>
+                    
                     </ul>
                 </li>
                 <li class="submenu">

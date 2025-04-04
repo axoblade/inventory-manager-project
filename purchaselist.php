@@ -1,15 +1,3 @@
-﻿<?php
-include("./authCheck.php");
-require("./db.php");
-$error = "";
-$success = false;
-$db = new MySQLDatabase();
-
-$employees = $db->fetchData('employees');
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,20 +27,18 @@ $employees = $db->fetchData('employees');
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
 <?php
         include_once("./navbar.php");
         ?>
-
 <div class="page-wrapper">
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>Employee List</h4>
-<h6>Manage your Employees</h6>
+<h4>Purchase List</h4>
+<h6>Manage your Purchases</h6>
 </div>
 <div class="page-btn">
-<a href="addemployee.php" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img" class="me-2">Add Employee</a>
+<a href="addpurchase.php" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img" class="me-2">Add Purchase</a>
 </div>
 </div>
 
@@ -92,24 +78,20 @@ $employees = $db->fetchData('employees');
 <div class="row">
 <div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<input type="text" placeholder="Enter User Name">
+<input type="text" class="datetimepicker cal-icon" placeholder="Choose Date">
 </div>
 </div>
 <div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<input type="text" placeholder="Enter Phone">
-</div>
-</div>
-<div class="col-lg-2 col-sm-6 col-12">
-<div class="form-group">
-<input type="text" placeholder="Enter Email">
+<input type="text" placeholder="Enter Reference">
 </div>
 </div>
 <div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
 <select class="select">
-<option>Disable</option>
-<option>Enable</option>
+<option>Choose Status</option>
+<option>Inprogress</option>
+<option>Complete</option>
 </select>
 </div>
 </div>
@@ -128,54 +110,39 @@ $employees = $db->fetchData('employees');
 <tr>
 <th>
 <label class="checkboxs">
-<input type="checkbox">
+<input type="checkbox" id="select-all">
 <span class="checkmarks"></span>
 </label>
 </th>
-<th>First name </th>
-<th>Last name </th>
-<th>User name </th>
-<th>Phone</th>
-<th>email</th>
+<div class="row">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th>Product Name</th>
+<th>QTY</th>
+<th>Purchase price</th>
+<th>Discount</th>
+<th>Unity Cost</th>
+<th>Total Cost</th>
+<th>Status</th>
+<th>Action</th>
 </tr>
 </thead>
 <tbody>
-<div class="modal-footer">
-<button type="button" class="btn btn-submit">Submit</button>
-<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-<?php
-		foreach ($employees as $data) { ?>
-                                    <tr>
-                                        <td>
-                                            <label class="checkboxs">
-                                            <input type="checkbox" id="select-all">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </td>
-                                        <td class="productimgname">
-                                            <?= $data['first_name'] ?>
-                                        </td>
-                                        <td><?= $data['last_name'] ?></td>
-                                        <td>
-                                            <?= $data['username'] ?>
-                                        </td>
-                                        <td>
-                                            <?= $data['phone'] ?>
-                                        </td>
-                                        <td><?= $data['email'] ?></td>
-                    
-                                    </tr>
-                                    <?php
-									}
-									?>
-</div>
-</div>
-</div>
-</div>
+
 </tbody>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
 
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>
 
@@ -186,10 +153,10 @@ $employees = $db->fetchData('employees');
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/plugins/select2/js/select2.min.js"></script>
-
 <script src="assets/js/moment.min.js"></script>
 <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="assets/plugins/select2/js/select2.min.js"></script>
 
 <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
 <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
