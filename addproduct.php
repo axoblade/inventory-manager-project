@@ -30,11 +30,13 @@ if (isset($_POST['addProduct'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta name="description" content="POS - Bootstrap Admin Template">
-    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
+    <meta name="keywords"
+        content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
     <meta name="author" content="Dreamguys - Bootstrap Admin Template">
     <meta name="robots" content="noindex, nofollow">
     <title>Inventory Management System</title>
@@ -47,11 +49,12 @@ if (isset($_POST['addProduct'])) {
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('select[name="rawMaterial"]').on('change', function () {
+        $(document).ready(function() {
+            $('select[name="rawMaterial"]').on('change', function() {
                 if ($(this).val() === 'Yes') {
                     $('#supplierField').slideDown();
                 } else {
@@ -86,7 +89,8 @@ if (isset($_POST['addProduct'])) {
                     </div>
                 </li>
                 <div class="dropdown mobile-user-menu">
-                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="profile.html">My Profile</a>
                         <a class="dropdown-item" href="generalsettings.html">Settings</a>
@@ -107,17 +111,17 @@ if (isset($_POST['addProduct'])) {
                     </div>
                 </div>
                 <?php if (!empty($error)) : ?>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error!</strong> <?= $error; ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error!</strong> <?= $error; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 <?php endif; ?>
 
                 <?php if (!empty($success)) : ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Success!</strong> Product added successfully
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong> Product added successfully
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 <?php endif; ?>
 
                 <div class="card">
@@ -143,13 +147,10 @@ if (isset($_POST['addProduct'])) {
                                     <div class="form-group">
                                         <label>Select Supplier</label>
                                         <select class="select form-control" name="supplier_id">
-                                            <option value="">Select Supplier</option>
-                                            <?php 
+                                            <?php
                                             if (!empty($suppliers) && is_array($suppliers)) {
                                                 foreach ($suppliers as $supplier) {
-                                                    if (isset($supplier['id'], $supplier['name'])) {
-                                                        echo '<option value="' . htmlspecialchars($supplier['id']) . '">' . htmlspecialchars($supplier['name']) . '</option>';
-                                                    }
+                                                    echo '<option value="' . htmlspecialchars($supplier['supplier_id']) . '">' . htmlspecialchars($supplier['name']) . '</option>';
                                                 }
                                             } else {
                                                 echo '<option disabled>No suppliers available</option>';
@@ -179,7 +180,7 @@ if (isset($_POST['addProduct'])) {
                                 <div class="col-lg-3 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label>Selling Price</label>
-                                        <input type="number" class="form-control" name="price" required>
+                                        <input type="number" class="form-control" name="price" value="0" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6 col-12">
@@ -217,4 +218,5 @@ if (isset($_POST['addProduct'])) {
     <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

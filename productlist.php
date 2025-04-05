@@ -1,3 +1,14 @@
+<?php
+require("./authCheck.php");
+require("./db.php");
+$error = "";
+$success = false;
+$db = new MySQLDatabase();
+
+$products = $db->fetchData('products');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,15 +67,15 @@
                     </div>
                 </li>
 
-            <div class="dropdown mobile-user-menu">
-                <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="profile.html">My Profile</a>
-                    <a class="dropdown-item" href="generalsettings.html">Settings</a>
-                    <a class="dropdown-item" href="signin.html">Logout</a>
+                <div class="dropdown mobile-user-menu">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                        <a class="dropdown-item" href="generalsettings.html">Settings</a>
+                        <a class="dropdown-item" href="signin.html">Logout</a>
+                    </div>
                 </div>
-            </div>
 
         </div>
 
@@ -87,61 +98,39 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <div class="table-top">
-                            <div class="search-set">
-                                <div class="search-path">
-                                    <a class="btn btn-filter" id="filter_search">
-                                        <img src="assets/img/icons/filter.svg" alt="img">
-                                        <span><img src="assets/img/icons/closes.svg" alt="img"></span>
-                                    </a>
-                                </div>
-                                <div class="search-input">
-                                    <a class="btn btn-searchset"><img src="assets/img/icons/search-white.svg"
-                                            alt="img"></a>
-                                </div>
-                            </div>
-                            <div class="wordset">
-                                <ul>
-                                    <li>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img
-                                                src="assets/img/icons/pdf.svg" alt="img"></a>
-                                    </li>
-                                    <li>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><img
-                                                src="assets/img/icons/excel.svg" alt="img"></a>
-                                    </li>
-                                    <li>
-                                        <a data-bs-toggle="tooltip" data-bs-placement="top" title="print"><img
-                                                src="assets/img/icons/printer.svg" alt="img"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                       
-
                         <div class="table-responsive">
                             <table class="table  datanew">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox" id="select-all">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
                                         <th>Product Name</th>
                                         <th>SKU</th>
-                                        <th>Category </th>
-                                        <th>Brand</th>
-                                        <th>price</th>
-                                        <th>Unit</th>
+                                        <th>Description </th>
                                         <th>Qty</th>
-                                        <th>Created By</th>
+                                        <th>Price</th>
+                                        <th>Cost</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                    foreach ($products as $product) {
+                                    ?>
+                                        <tr>
+                                            <td><?= $product['name'] ?></td>
+                                            <td><?= $product['sku'] ?></td>
+                                            <td><?= $product['description'] ?></td>
+                                            <td><?= $product['avQty'] ?></td>
+                                            <td><?= number_format($product['price'], 2) ?></td>
+                                            <td><?= number_format($product['cost'], 2) ?></td>
+                                            <td>
+                                                <a class="me-3" href="">
+                                                    <img src="assets/img/icons/edit.svg" alt="img">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>

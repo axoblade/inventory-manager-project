@@ -14,10 +14,10 @@ class MySQLDatabase
     {
         $host = "localhost";
         $username = "root";
-        $password = "";
+        $password = "root";
         $database = "inventory";
-        /*$port = 8889;*/
-        $this->connection = new mysqli($host, $username, $password, $database);
+        $port = 8889;
+        $this->connection = new mysqli($host, $username, $password, $database, $port);
 
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
@@ -87,6 +87,47 @@ class MySQLDatabase
         $stmt->close();
 
         return $data ?: [];
+    }
+
+    /**
+     * Execute a raw SQL query with optional parameters
+     * @param string $sql The SQL query to execute
+     * @param array $params Optional array of parameters to bind
+     * @param string $types Optional string of parameter types (e.g., "iss" for integer, string, string)
+     * @return array|bool For SELECT queries: array of results or empty array if no results
+     *                   For other queries: true on success, false on failure
+     * @throws Exception If query preparation fails
+     */
+    public function query($sql, $params = [], $types = "")
+    {
+        $stmt = $this->connection->prepare($sql);
+        if (!$stmt) {
+            throw new Exception("Query preparation failed: " . $this->connection->error);
+        }
+
+        // Bind parameters if provided
+        if (!empty($params)) {
+            // If types aren't specified, default to strings
+            if (empty($types)) {
+                $types = str_repeat("s", count($params));
+            }
+            $stmt->bind_param($types, ...$params);
+        }
+
+        $stmt->execute();
+
+        // For SELECT queries, return results
+        if (stripos(trim($sql), 'SELECT') === 0) {
+            $result = $stmt->get_result();
+            $data = $result->fetch_all(MYSQLI_ASSOC);
+            $stmt->close();
+            return $data ?: [];
+        }
+
+        // For other queries (INSERT, UPDATE, DELETE), return success status
+        $success = $stmt->affected_rows >= 0;
+        $stmt->close();
+        return $success;
     }
 
     /**

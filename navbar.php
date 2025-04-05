@@ -1,6 +1,5 @@
-
 <div class="sidebar" id="sidebar">
- 
+
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
@@ -13,7 +12,7 @@
                             Product</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="productlist.php">Product List</a></li>
-                
+
                     </ul>
                 </li>
                 <li class="submenu">
@@ -30,8 +29,8 @@
                     <a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span>
                             Purchases</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="Purchaselist.php">Purchases list</a></li>
-                       
+                        <li><a href="purchaselist.php">Purchases list</a></li>
+
                     </ul>
                 </li>
                 <li class="submenu">
@@ -51,7 +50,7 @@
                         <li><a href="customerlist.php">Customer List</a></li>
                         <li><a href="supplierlist.php">Supplier List</a></li>
                         <li><a href="employeelist.php">Employee List</a></li>
-                    
+
                     </ul>
                 </li>
                 <li class="submenu">
