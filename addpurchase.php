@@ -77,7 +77,6 @@
 <option>Choose</option>
 <option>Supplier Name</option>
 </select>
-
 </thead>
 <tbody>
 </tbody>
