@@ -71,59 +71,65 @@ $purchases = $db->fetchData('purchases');
                                         }
                                         ?>
 
-                                        <div class="table-responsive">
-                                                <table class="table  datanew">
-                                                        <thead>
-                                                                <tr>
-                                                                        <div class="row">
-                                                                                <div class="table-responsive">
-                                                                                        <table class="table">
-                                                                                                <thead>
-                                                                                                        <tr>
-                                                                                                                <th>Purchase #</th>
-                                                                                                                <th>Date</th>
-                                                                                                                <th>Supplier Name</th>
-                                                                                                                <th>Action</th>
-                                                                                                        </tr>
-                                                                                                </thead>
-                                                                                                <tbody>
-                                                                                                        <?php
-                                                                                                        foreach ($purchases as $purchase) {
-                                                                                                                $supplier = $db->fetchData('service_providers', ['supplier_id' => $purchase['supplier_id']])[0];
-                                                                                                        ?>
-                                                                                                                <td><?= $purchase['purchase_id'] ?></td>
-                                                                                                                <td><?= $purchase['purchase_date'] ?></td>
-                                                                                                                <td><?= $supplier['name'] ?></td>
-                                                                                                                <td>
-                                                                                                                        <a class="me-3" href="purchase-details.php">
-                                                                                                                                <img src="assets/img/icons/edit.svg" alt="img">
-                                                                                                                        </a>
-                                                                                                                </td>
-                                                                                                        <?php
-                                                                                                        }
-                                                                                                        ?>
-                                                                                                </tbody>
-                                                                                        </table>
-                                                                                        <script src="assets/js/jquery-3.6.0.min.js"></script>
+                                        <div class="row">
+                                                <div class="table-responsive">
+                                                        <table class="table  datanew">
+                                                                <thead>
+                                                                        <tr>
+                                                                                <th>Purchase #</th>
+                                                                                <th>Date</th>
+                                                                                <th>Supplier Name</th>
+                                                                                <th>Action</th>
+                                                                        </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                        <?php
+                                                                        foreach ($purchases as $purchase) {
+                                                                                $supplier = $db->fetchData('service_providers', ['supplier_id' => $purchase['supplier_id']])[0];
+                                                                        ?>
+                                                                                <tr>
+                                                                                        <td><?= $purchase['purchase_id'] ?></td>
+                                                                                        <td><?= $purchase['purchase_date'] ?></td>
+                                                                                        <td><?= $supplier['name'] ?></td>
+                                                                                        <td>
+                                                                                                <a class="me-3" href="purchase-details.php">
+                                                                                                        <img src="assets/img/icons/edit.svg" alt="img">
+                                                                                                </a>
+                                                                                        </td>
+                                                                                </tr>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+                                                                </tbody>
+                                                        </table>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
 
-                                                                                        <script src="assets/js/feather.min.js"></script>
 
-                                                                                        <script src="assets/js/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
 
-                                                                                        <script src="assets/js/jquery.dataTables.min.js"></script>
-                                                                                        <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+        <script src="assets/js/feather.min.js"></script>
 
-                                                                                        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.min.js"></script>
 
-                                                                                        <script src="assets/js/moment.min.js"></script>
-                                                                                        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="assets/js/jquery.dataTables.min.js"></script>
+        <script src="assets/js/dataTables.bootstrap4.min.js"></script>
 
-                                                                                        <script src="assets/plugins/select2/js/select2.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-                                                                                        <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
-                                                                                        <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 
-                                                                                        <script src="assets/js/script.js"></script>
+        <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+        <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+        <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
+
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>
