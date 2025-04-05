@@ -20,7 +20,7 @@
                     <a href="javascript:void(0);"><img src="assets/img/icons/sales1.svg" alt="img"><span>
                             Sales</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="saleslist.html">Orders</a></li>
+                        <li><a href="saleslist.php">Orders</a></li>
                         <li><a href="salesreturnlists.html">Orders List</a></li>
                         <li><a href="createsalesreturns.html">New Order</a></li>
                     </ul>
