@@ -108,12 +108,6 @@
 <table class="table  datanew">
 <thead>
 <tr>
-<th>
-<label class="checkboxs">
-<input type="checkbox" id="select-all">
-<span class="checkmarks"></span>
-</label>
-</th>
 <div class="row">
 <div class="table-responsive">
 <table class="table">
@@ -133,15 +127,6 @@
 
 </tbody>
 </table>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>
