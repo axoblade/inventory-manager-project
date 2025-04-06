@@ -27,10 +27,10 @@
 
                 <li class="submenu">
                     <a href="javascript:void(0);"><img src="assets/img/icons/transfer1.svg" alt="img"><span>
-                            Purchases</span> <span class="menu-arrow"></span></a>
+                            Stock Management</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="purchaselist.php">Purchases list</a></li>
-
+                        <li><a href="manufacturelist.php">Stock Manufacture list</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
