@@ -19,7 +19,13 @@
                     <a href="javascript:void(0);"><img src="assets/img/icons/sales1.svg" alt="img"><span>
                             Sales</span> <span class="menu-arrow"></span></a>
                     <ul>
+<<<<<<< HEAD
                         <li><a href="salesreturnlists.php">Orders List</a></li>
+=======
+                        <li><a href="saleslist.html">Orders</a></li>
+                        <li><a href="salesreturnlists.html">Orders List</a></li>
+                        <li><a href="createsalesreturns.html">New Order</a></li>
+>>>>>>> 5fd3308 (save chsnges)
                     </ul>
                 </li>
 
